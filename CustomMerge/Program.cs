@@ -46,7 +46,6 @@ namespace CustomMerge
                         Console.ReadLine();
                         return;
                     }
-                 
                 }
             }
 
@@ -67,6 +66,7 @@ namespace CustomMerge
 
             bool success = false;
             bool idFound = false;
+
             if (!File.Exists("Setting.txt"))
             {
                 Console.WriteLine("Setting.txt not found");
