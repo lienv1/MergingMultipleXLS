@@ -19,12 +19,17 @@ namespace CustomMerge
             Console.WriteLine("Start...");
             if (!GetSettings())
             {
-                Console.WriteLine("Setting.txt not found or format is invalid");
+                Console.WriteLine("Press Enter to close");
                 Console.ReadLine();
                 return;
             }
 
-            CollectAllExcelData();
+            if (!CollectAllExcelData())
+            {
+                Console.WriteLine("Press Enter to close");
+                Console.ReadLine();
+                return;
+            }
 
             foreach (Product product in products)
             {
@@ -53,6 +58,7 @@ namespace CustomMerge
             }
 
             Console.WriteLine("Finished!");
+            Console.WriteLine("Press Enter to close");
             Console.ReadLine();
         }
 
@@ -63,6 +69,7 @@ namespace CustomMerge
             bool idFound = false;
             if (!File.Exists("Setting.txt"))
             {
+                Console.WriteLine("Setting.txt not found");
                 return success;
             }
             string line = File.ReadLines("Setting.txt").First();
@@ -104,11 +111,15 @@ namespace CustomMerge
             return success;
         }
     
-        static void CollectAllExcelData()
+        static bool CollectAllExcelData()
         {
             DirectoryInfo dinfo = new DirectoryInfo(Directory.GetCurrentDirectory());
             FileInfo[] Files = dinfo.GetFiles("*.xls");
-
+            if (Files.Length < 1)
+            {
+                Console.WriteLine("no xls found");
+                return false;
+            }
             //Save titles
             FileInfo first = Files[0];
             var workbookT = Workbook.Load(first.Name);
@@ -145,6 +156,7 @@ namespace CustomMerge
                     products.Add(product);
                 }
             }
+            return true;
         }
     
         static bool ProductIsInNonDuplicateList(Product toCheck)
