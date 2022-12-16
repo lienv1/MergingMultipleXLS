@@ -1,0 +1,9 @@
+C:\GitHub\ConsoleApps\Collection\CustomMerge\CustomMerge\bin\Debug\CustomMerge.exe.config
+C:\GitHub\ConsoleApps\Collection\CustomMerge\CustomMerge\bin\Debug\CustomMerge.exe
+C:\GitHub\ConsoleApps\Collection\CustomMerge\CustomMerge\bin\Debug\CustomMerge.pdb
+C:\GitHub\ConsoleApps\Collection\CustomMerge\CustomMerge\bin\Debug\ExcelLibrary.dll
+C:\GitHub\ConsoleApps\Collection\CustomMerge\CustomMerge\obj\Debug\CustomMerge.csproj.AssemblyReference.cache
+C:\GitHub\ConsoleApps\Collection\CustomMerge\CustomMerge\obj\Debug\CustomMerge.csproj.CoreCompileInputs.cache
+C:\GitHub\ConsoleApps\Collection\CustomMerge\CustomMerge\obj\Debug\CustomMerge.csproj.CopyComplete
+C:\GitHub\ConsoleApps\Collection\CustomMerge\CustomMerge\obj\Debug\CustomMerge.exe
+C:\GitHub\ConsoleApps\Collection\CustomMerge\CustomMerge\obj\Debug\CustomMerge.pdb
